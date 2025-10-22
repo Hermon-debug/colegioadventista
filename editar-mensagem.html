@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Mensagem - Colégio Adventista da Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="images/logo.jpg" alt="Logo CAL" class="logo-image">
+                <h3>Colégio Adventista Admin</h3>
+            </div>
+            <nav class="admin-nav">
+                <a href="painel-admin.html">
+                    <i class="fas fa-envelope"></i> Boletim Informativo
+                </a>
+                <a href="mensagens-contato.html" class="active">
+                    <i class="fas fa-comments"></i> Mensagens de Contacto
+                </a>
+                <a href="index.html">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </nav>
+            <div class="admin-user">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <strong>Administrador</strong>
+                    <small>admin@colegiocal.com</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div>
+                    <h1>Detalhes da Mensagem #12</h1>
+                </div>
+                <a href="mensagens-contato.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </a>
+            </header>
+
+            <div class="message-details-container">
+                <div class="message-card">
+                    <div class="message-header">
+                        <div class="message-info">
+                            <h2>Maria João</h2>
+                            <p><i class="fas fa-envelope"></i> mariajoao@example.com</p>
+                            <p><i class="fas fa-calendar"></i> 21/10/2025 15:42</p>
+                        </div>
+                        <span class="status-badge status-pending">Pendente</span>
+                    </div>
+
+                    <div class="message-subject">
+                        <h3>Assunto</h3>
+                        <span class="subject-badge">Informações sobre matrícula</span>
+                    </div>
+
+                    <div class="message-body">
+                        <h3>Mensagem</h3>
+                        <div class="message-content">
+                            Boa tarde, gostaria de saber mais detalhes sobre o processo de matrícula para o próximo ano lectivo. Quais são os documentos necessários e o período de inscrição?
+                        </div>
+                    </div>
+
+                    <div class="message-actions">
+                        <a href="#" class="btn-primary">
+                            <i class="fas fa-check"></i> Marcar como Respondido
+                        </a>
+                        <a href="mailto:mariajoao@example.com" class="btn-secondary">
+                            <i class="fas fa-reply"></i> Responder por E-mail
+                        </a>
+                        <a href="#" class="btn-danger" onclick="return confirm('Tem certeza que deseja remover esta mensagem?')">
+                            <i class="fas fa-trash"></i> Deletar Mensagem
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

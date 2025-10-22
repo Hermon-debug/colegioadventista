@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Colégio Adventista da Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <img src="images/logo.jpg" alt="Logo CAL" class="logo-image">
+                <h1>Colégio Adventista da Liberdade</h1>
+            </div>
+
+            <h2>Entrar</h2>
+            <p class="auth-subtitle">Acesse sua conta</p>
+
+            <!-- Mensagem de erro exemplo -->
+            <!-- <div class="alert alert-error">
+                <i class="fas fa-exclamation-circle"></i> E-mail ou senha incorretos.
+            </div> -->
+
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+
+                <a href="painel-admin.html">
+  <button type="button" class="btn-primary btn-full">Entrar</button>
+</a>
+
+            </form>
+
+           <p class="auth-link">
+                Não tem uma conta? <a href="registro.html">Registre-se</a>
+            </p>   
+
+            <p class="auth-link">
+                <a href="index.html">← Voltar para o início</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

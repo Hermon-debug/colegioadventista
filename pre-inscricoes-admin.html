@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-Inscrições - Colégio Adventista da Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="images/logo.jpg?height=200&width=300" alt="Logo CAL" class="logo-image">
+                <h3>Colégio Adventista Admin</h3>
+            </div>
+            <nav class="admin-nav">
+                <a href="painel-admin.html">
+                    <i class="fas fa-envelope"></i> Boletim Informativo
+                </a>
+                <a href="mensagem-contato.html">
+                    <i class="fas fa-comments"></i> Mensagens de Contacto
+                </a>
+                <a href="pre-inscricoes-admin.html" class="active">
+                    <i class="fas fa-user-graduate"></i> Pré-Inscrições
+                </a>
+                <a href="logout.php">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </nav>
+            <div class="admin-user">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <strong>Administrador</strong>
+                    <small>admin@cal.edu.mz</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div>
+                    <h1>Pré-Inscrições</h1>
+                </div>
+            </header>
+
+            <!-- Mensagem de alerta -->
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle"></i>
+                Status atualizado com sucesso!
+            </div>
+
+            <!-- Estatísticas -->
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <div>
+                        <h3>120</h3>
+                        <p>Total de Pré-Inscrições</p>
+                    </div>
+                </div>
+                <div class="stat-card stat-warning">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>35</h3>
+                        <p>Pendentes</p>
+                    </div>
+                </div>
+                <div class="stat-card stat-info">
+                    <i class="fas fa-search"></i>
+                    <div>
+                        <h3>20</h3>
+                        <p>Em Análise</p>
+                    </div>
+                </div>
+                <div class="stat-card stat-success">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>50</h3>
+                        <p>Aprovados</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtro de status -->
+            <div class="filter-container">
+                <label>Filtrar por status:</label>
+                <select class="filter-select">
+                    <option value="todos" selected>Todos</option>
+                    <option value="pendente">Pendente</option>
+                    <option value="em_analise">Em Análise</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="rejeitado">Rejeitado</option>
+                </select>
+            </div>
+
+            <!-- Tabela de pré-inscrições -->
+            <div class="admin-table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome do Aluno</th>
+                            <th>Responsável</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                            <th>Série</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                            <th>Acções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>João Silva</strong></td>
+                            <td>Maria Silva</td>
+                            <td>joao.silva@gmail.com</td>
+                            <td>(+258) 840000001</td>
+                            <td>10º Ano</td>
+                            <td>15/10/2025</td>
+                            <td>
+                                <select class="status-select status-pendente">
+                                    <option value="pendente" selected>Pendente</option>
+                                    <option value="em_analise">Em Análise</option>
+                                    <option value="aprovado">Aprovado</option>
+                                    <option value="rejeitado">Rejeitado</option>
+                                </select>
+                            </td>
+                            <td class="action-buttons">
+                                <a href="#" class="btn-view" title="Ver Detalhes"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="btn-delete" title="Deletar" onclick="return confirm('Tem certeza que deseja remover esta pré-inscrição?')"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Ana Costa</strong></td>
+                            <td>Carlos Costa</td>
+                            <td>ana.costa@gmail.com</td>
+                            <td>(+258) 840000002</td>
+                            <td>8º Ano</td>
+                            <td>16/10/2025</td>
+                            <td>
+                                <select class="status-select status-em_analise">
+                                    <option value="pendente">Pendente</option>
+                                    <option value="em_analise" selected>Em Análise</option>
+                                    <option value="aprovado">Aprovado</option>
+                                    <option value="rejeitado">Rejeitado</option>
+                                </select>
+                            </td>
+                            <td class="action-buttons">
+                                <a href="#" class="btn-view" title="Ver Detalhes"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="btn-delete" title="Deletar" onclick="return confirm('Tem certeza que deseja remover esta pré-inscrição?')"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9" class="no-data">
+                                <i class="fas fa-inbox"></i>
+                                <p>Nenhuma outra pré-inscrição encontrada</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

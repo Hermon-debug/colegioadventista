@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Inscrito - Colégio Adventista da Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="images/logo.jpg" alt="Logo CAL" class="logo-image">
+                <h3>Colégio Adventista Admin</h3>
+            </div>
+            <nav class="admin-nav">
+                <a href="painel-admin.html">
+                    <i class="fas fa-envelope"></i> Boletim Informativo
+                </a>
+                <a href="index.html">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </nav>
+            <div class="admin-user">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <strong>Administrador</strong>
+                    <small>admin@colegiocal.com</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <h1>Editar Inscrito</h1>
+            </header>
+
+            <div class="admin-form-container">
+                <a href="painel-admin.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </a>
+
+                <!-- Mensagem de erro exemplo -->
+                <!-- <div class="alert alert-error">
+                    <i class="fas fa-exclamation-circle"></i> Este e-mail já está cadastrado.
+                </div> -->
+
+                <form class="admin-form">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" value="exemplo@dominio.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data_inscricao">Data de Inscrição</label>
+                        <input type="text" id="data_inscricao" value="22/10/2025 10:00" disabled>
+                        <small>Este campo não pode ser editado</small>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="ativo" checked>
+                            <span>Inscrito activo</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-primary">
+                            <i class="fas fa-save"></i> Salvar Alterações
+                        </button>
+                        <a href="painel-admin.html" class="btn-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

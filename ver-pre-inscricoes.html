@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Pré-Inscrição - Colégio Adventista da Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="images/logo.jpg?height=200&width=300" alt="Logo CAL" class="logo-image">
+                 <h3>Colégio Adventista Admin</h3>
+            </div>
+            <nav class="admin-nav">
+                <a href="painel-admin.html">
+                    <i class="fas fa-envelope"></i> Boletim Informativo
+                </a>
+                <a href="mensagens-contato.html">
+                    <i class="fas fa-comments"></i> Mensagens de Contacto
+                </a>
+                <a href="pre-inscricoes-admin.html" class="active">
+                    <i class="fas fa-user-graduate"></i> Pré-Inscrições
+                </a>
+                <a href="login.html">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </nav>
+            <div class="admin-user">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <strong>Nome do Usuário</strong>
+                    <small>usuario@exemplo.com</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div>
+                    <h1>Detalhes da Pré-Inscrição #123</h1>
+                    <p>Informações completas do candidato</p>
+                </div>
+                <a href="pre-inscricoes-admin.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </a>
+            </header>
+
+            <div class="detail-container">
+                <div class="detail-section">
+                    <h2><i class="fas fa-user"></i> Dados do Aluno</h2>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <label>Nome Completo:</label>
+                            <p>João da Silva</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Data de Nascimento:</label>
+                            <p>15/03/2010</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Ano Desejado:</label>
+                            <p>6ª Classe</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Escola Anterior:</label>
+                            <p>Escola Primária Central</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h2><i class="fas fa-users"></i> Dados do Encarregado</h2>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <label>Nome do Encarregado:</label>
+                            <p>Maria da Silva</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Email:</label>
+                            <p><a href="mailto:maria.silva@example.com">maria.silva@example.com</a></p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Telefone:</label>
+                            <p><a href="tel:+258840000000">+258 84 000 0000</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h2><i class="fas fa-comment"></i> Observações</h2>
+                    <div class="detail-item">
+                        <p>Aluno muito interessado em atividades extracurriculares e esportes.</p>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h2><i class="fas fa-info-circle"></i> Informações da Inscrição</h2>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <label>Data da Inscrição:</label>
+                            <p>20/10/2025 14:30</p>
+                        </div>
+                        <div class="detail-item">
+                            <label>Status Actual:</label>
+                            <p>
+                                <span class="status-badge status-pendente">
+                                    Pendente
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-actions">
+                    <a href="mailto:maria.silva@example.com" class="btn-email">
+                        <i class="fas fa-envelope"></i> Enviar Email
+                    </a>
+                    <a href="pre-inscricoes-admin.html" 
+                       class="btn-delete-full"
+                       onclick="return confirm('Tem certeza que deseja remover esta pré-inscrição?')">
+                        <i class="fas fa-trash"></i> Deletar Pré-Inscrição
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

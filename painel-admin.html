@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Colégio Adventista da Liberdade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <img src="images/logo.jpg?height=200&width=300" alt="Logo CAL" class="logo-image">
+                <h3>Colégio Adventista Admin</h3>
+            </div>
+            <nav class="admin-nav">
+                <a href="painel-admin.html" class="active">
+                    <i class="fas fa-envelope"></i> Boletim Informativo
+                </a>
+                <a href="mensagem-contato.html">
+                    <i class="fas fa-comments"></i> Mensagens de Contacto
+                </a>
+                <a href="pre-inscricoes-admin.html">
+                    <i class="fas fa-user-graduate"></i> Pré-Inscrições
+                </a>
+                <a href="logout.php">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </a>
+            </nav>
+            <div class="admin-user">
+                <i class="fas fa-user-circle"></i>
+                <div>
+                    <strong>Administrador</strong>
+                    <small>admin@cal.edu.mz</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div>
+                    <h1>Boletim Informativo</h1>
+                </div>
+                <div class="header-actions">
+                    <a href="#" class="btn-optimize" title="Reorganizar IDs">
+                        <i class="fas fa-sync-alt"></i> Actualizar
+                    </a>
+                    <a href="#" class="btn-new-user">
+                        <i class="fas fa-user-plus"></i> Criar Novo Usuário
+                    </a>
+                </div>
+            </header>
+
+            <div class="alert alert-success">
+                <i class="fas fa-check-circle"></i> Inscrito removido com sucesso!
+            </div>
+
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h3>15</h3>
+                        <p>Total de Inscritos</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-user-check"></i>
+                    <div>
+                        <h3>12</h3>
+                        <p>Inscritos Activos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>E-mail</th>
+                            <th>Data de Inscrição</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>joao@email.com</td>
+                            <td>20/10/2025 14:30</td>
+                            <td><span class="status-badge status-active">Ativo</span></td>
+                            <td class="action-buttons">
+                                <a href="#" class="btn-edit" title="Editar"><i class="fas fa-edit"></i></a>
+                                <a href="#" class="btn-delete" title="Deletar"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>maria@email.com</td>
+                            <td>19/10/2025 09:15</td>
+                            <td><span class="status-badge status-inactive">Inativo</span></td>
+                            <td class="action-buttons">
+                                <a href="#" class="btn-edit" title="Editar"><i class="fas fa-edit"></i></a>
+                                <a href="#" class="btn-delete" title="Deletar"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>pedro@email.com</td>
+                            <td>18/10/2025 11:45</td>
+                            <td><span class="status-badge status-active">Ativo</span></td>
+                            <td class="action-buttons">
+                                <a href="#" class="btn-edit" title="Editar"><i class="fas fa-edit"></i></a>
+                                <a href="#" class="btn-delete" title="Deletar"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        <!-- Adicione mais linhas de exemplo se desejar -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

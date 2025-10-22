@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Novo Usuário - Colégio Adventista da Liberdade</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="admin-container">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-logo">
+        <img src="images/logo.jpg?height=200&width=300" alt="Logo CAL" class="logo-image">
+        <h3>Colégio Adventista Admin</h3>
+      </div>
+      <nav class="admin-nav">
+        <a href="painel-admin.html">
+          <i class="fas fa-envelope"></i> Boletim Informativo
+        </a>
+        <a href="mensagens-contato.html">
+          <i class="fas fa-comments"></i> Mensagens de Contacto
+        </a>
+        <a href="criar-usuario.html" class="active">
+          <i class="fas fa-user-plus"></i> Criar Usuário
+        </a>
+        <a href="logout.html">
+          <i class="fas fa-sign-out-alt"></i> Sair
+        </a>
+      </nav>
+
+      <div class="admin-user">
+        <i class="fas fa-user-circle"></i>
+        <div>
+          <strong>Administrador</strong>
+          <small>admin@cal.org</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <h1>Criar Novo Usuário</h1>
+          <p>Adicione um novo usuário ao sistema</p>
+        </div>
+        <a href="painel-admin.html" class="btn-back">
+          <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+      </header>
+
+      <!-- Alertas simulados -->
+      <div id="alerta-erro" class="alert alert-error" style="display:none;">
+        <i class="fas fa-exclamation-circle"></i> <span id="erro-texto"></span>
+      </div>
+
+      <div id="alerta-sucesso" class="alert alert-success" style="display:none;">
+        <i class="fas fa-check-circle"></i> Usuário criado com sucesso!
+      </div>
+
+      <div class="form-container">
+        <form id="form-usuario" class="admin-form" onsubmit="return criarUsuario(event)">
+          <div class="form-group">
+            <label for="nome">
+              <i class="fas fa-user"></i> Nome Completo
+            </label>
+            <input 
+              type="text" 
+              id="nome" 
+              name="nome" 
+              required
+              placeholder="Digite o nome completo"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              <i class="fas fa-envelope"></i> E-mail
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+              placeholder="Digite o e-mail"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="senha">
+              <i class="fas fa-lock"></i> Senha
+            </label>
+            <input 
+              type="password" 
+              id="senha" 
+              name="senha" 
+              required
+              placeholder="Mínimo 6 caracteres"
+              minlength="6"
+            >
+            <small class="form-hint">A senha deve ter no mínimo 6 caracteres</small>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmar_senha">
+              <i class="fas fa-lock"></i> Confirmar Senha
+            </label>
+            <input 
+              type="password" 
+              id="confirmar_senha" 
+              name="confirmar_senha" 
+              required
+              placeholder="Digite a senha novamente"
+              minlength="6"
+            >
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-save"></i> Criar Usuário
+            </button>
+            <a href="painel-admin.html" class="btn-cancel">
+              <i class="fas fa-times"></i> Cancelar
+            </a>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Simulação de criação de usuário (sem backend)
+    function criarUsuario(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value;
+      const confirmar = document.getElementById('confirmar_senha').value;
+      const erroBox = document.getElementById('alerta-erro');
+      const erroTexto = document.getElementById('erro-texto');
+      const sucessoBox = document.getElementById('alerta-sucesso');
+
+      erroBox.style.display = 'none';
+      sucessoBox.style.display = 'none';
+
+      if (!nome || !email || !senha || !confirmar) {
+        erroTexto.textContent = 'Todos os campos são obrigatórios.';
+        erroBox.style.display = 'block';
+        return false;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        erroTexto.textContent = 'E-mail inválido.';
+        erroBox.style.display = 'block';
+        return false;
+      }
+
+      if (senha.length < 6) {
+        erroTexto.textContent = 'A senha deve ter no mínimo 6 caracteres.';
+        erroBox.style.display = 'block';
+        return false;
+      }
+
+      if (senha !== confirmar) {
+        erroTexto.textContent = 'As senhas não coincidem.';
+        erroBox.style.display = 'block';
+        return false;
+      }
+
+      // Simulação de sucesso
+      sucessoBox.style.display = 'block';
+      document.getElementById('form-usuario').reset();
+      return false;
+    }
+
+    // Validação em tempo real da confirmação de senha
+    document.getElementById('confirmar_senha').addEventListener('input', function() {
+      const senha = document.getElementById('senha').value;
+      this.setCustomValidity(this.value !== senha ? 'As senhas não coincidem' : '');
+    });
+  </script>
+</body>
+</html>
